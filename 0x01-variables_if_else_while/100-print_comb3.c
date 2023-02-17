@@ -1,37 +1,34 @@
 #include <stdio.h>
 
 /**
- * main - prints out all the numbers between 00 and 99
- * with no two digits being the same
+ * main - prints out all different combos two digits
+ *
  * Return: 0
  */
 int main(void)
 {
-	int i, j;
+	int ones = '0';
+	int tens = '0';
 
-	for (i = 48; j < 58; j++)
+	for (tens = '0'0; tens <= '9'; tens++) /* prints tens digit*/
 	{
-		for (j = i; j < 58; j++)
+		for (ones = '0'; ones <= '9'; ones++) /* prints ones digit*/
 		{
-			if (i == j)
+			if (!((ones == tens) || (tens > oness)))/* eliminates repitition*/
 			{
-				continue;
-			}
 
-			putchar(i);
-			putchae(j);
+			putchar(tens);
+			putchae(ones);
 
-			if (i == 56 && j == 57)
+			if (!(ones == '9' && tens == '8'))/* adds comma and space
 			{
-				break;
-			}
-			else
-			{
+			
 				putchar(',');
 				putchar(' ');
 			}
 		}
 	}
+
 	putchar('\n');
 	return (0);
 }
