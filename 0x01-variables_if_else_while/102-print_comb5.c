@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - create2 pairs of numbers that do not repeat
@@ -6,21 +7,21 @@
  */
 int main(void)
 {
-	int j, i;
+	int i, j;
 
-	for (j = 0; i <= 99; j++)
+	for (i = 0; i < 100; i++)
 	{
-		for (i = j; i <= 99; i++)
+		for (j = 0; j < 100; j++)
 		{
-			if (i != j)
+			if (i < j)
 			{
-				putchar(j / 10 + 48);
-				putchar(j % 10 + 48);
-				putchar(' ');
 				putchar(i / 10 + 48);
 				putchar(i % 10 + 48);
+				putchar(' ');
+				putchar(j / 10 + 48);
+				putchar(j % 10 + 48);
 
-				if (j * 100 + 1 != 9899)
+				if (i != 98 || j != 99)
 				{
 					putchar(',');
 					putchar(' ');
