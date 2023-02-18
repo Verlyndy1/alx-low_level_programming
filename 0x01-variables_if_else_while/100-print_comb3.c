@@ -7,28 +7,27 @@
  */
 int main(void)
 {
-	int ones = '0';
-	int tens = '0';
+	int i;
+	int j;
 
-	for (tens = '0'0; tens <= '9'; tens++) /* prints tens digit*/
+	for (i = 0 ; i < 10 ; i++)
 	{
-		for (ones = '0'; ones <= '9'; ones++) /* prints ones digit*/
+		for (j = 1 ; j < 10 ; j++)
 		{
-			if (!((ones == tens) || (tens > oness)))/* eliminates repitition*/
+			if (i < j && i != j)
 			{
 
-			putchar(tens);
-			putchae(ones);
-
-			if (!(ones == '9' && tens == '8'))/* adds comma and space
-			{
-			
+				putchar(i + '0');
+				putchar(j + '0');
+				if (i + j != 17)
+				{
 				putchar(',');
 				putchar(' ');
+				}
 			}
 		}
-	}
 
+	}
 	putchar('\n');
 	return (0);
 }
