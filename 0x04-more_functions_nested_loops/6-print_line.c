@@ -1,12 +1,13 @@
 #include "main.h"
 
-/*
- * print_line - print lines
+/**
+ * print_line - entry point
  *
- * @n: number of line
- *
- * Return: 0
+ * Description: Prints lines
+ *@n: number of lines
+ * Return: void
  */
+
 void print_line(int n)
 {
 	int num_lines;
