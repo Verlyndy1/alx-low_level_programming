@@ -1,9 +1,7 @@
 #include "main.h"
 
 /*
- * print_lines - entry point
- *
- * Description: print lines
+ * print_lines - print lines
  *
  * @n: number of line
  *
