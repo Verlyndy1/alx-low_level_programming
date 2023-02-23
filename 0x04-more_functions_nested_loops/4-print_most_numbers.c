@@ -1,10 +1,10 @@
 #include "main.h"
 /*
- * print_most_numbers - entry point
- * Description: prints numbers with _puchar
+ * print_most_numbers - prints function that checks for digit (0 through 9)
  *
- * Return: 0
+ * Return: void
  */
+
 void print_most_numbers(void)
 {
 	int number;
