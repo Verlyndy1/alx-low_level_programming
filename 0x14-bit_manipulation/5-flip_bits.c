@@ -3,22 +3,18 @@
 /**
  * flip_bits - counts the number of bits to change
  * to get from one number to another
- * @a: first number
- * @b: second number
+ * @n: first number
+ * @m: second number
  * Return: number of bits to change
  */
-unsigned int flip_bits(unsigned long int n, unsigned long int m)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int i, count = 0;
-	unsigned long int current;
-	unsigned long int exclusive = n ^ m;
+	unsigned long int xor = n ^ m, bits = 0;
 
-	for (i = 63; i >= 0; i--)
+	while (xor > 0)
 	{
-		current = exclusive >> i;
-		if (current & 1)
-			count++;
+		bits += (xor & 1);
+		xor >>= 1;
 	}
-
-	return (count);
+	return (bits);
 }
